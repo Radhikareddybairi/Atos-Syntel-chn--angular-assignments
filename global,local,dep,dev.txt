@@ -1,0 +1,13 @@
+1. globally: This drops modules in {prefix}/lib/node_modules , and puts executable files in {prefix}/bin , 
+where {prefix} is usually something like /usr/local . It also installs man pages in {prefix}/share/man , if they're supplied.
+
+
+ 2.locally: This installs your package in the current working directory.
+
+3.dependencies: ->dependencies are the modules which are required during the runtime.
+                           ->To save a dependency as a devDependency on installation
+                           -> we need to do an npm install --save-dev , instead of just an npm install --save.
+                           ->these are installed transitively.
+
+4.devdependencies: ->devdependencies are the modules which are required only during the development.
+                                 ->these are not installed transitively.
